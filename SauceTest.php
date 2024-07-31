@@ -3,10 +3,12 @@
 // to get the curl one-liner to run in this directory), then run:
 //     vendor/bin/phpunit SauceTest.php
 
-require_once "vendor/autoload.php";
+// Use the autoload from Composer
+use Sauce\Sausage\WebDriverTestCase;
+
 define("APP_URL", "http://appium.s3.amazonaws.com/TestApp6.0.app.zip");
 
-class SauceTest extends Sauce\Sausage\WebDriverTestCase
+class SauceTest extends WebDriverTestCase
 {
     protected $numValues = array();
 
